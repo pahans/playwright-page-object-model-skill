@@ -1,0 +1,9 @@
+{
+  "name": "playwright-page-object-model",
+  "description": "Skill for writing and reviewing Playwright TypeScript E2E tests with the Page Object Model pattern: page classes, semantic locators, and custom fixtures.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pahan Sarathchandra"
+  },
+  "homepage": "https://github.com/pahans/playwright-page-object-model-skill"
+}
