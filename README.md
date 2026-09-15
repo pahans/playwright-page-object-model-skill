@@ -10,6 +10,21 @@ Derived from a real Playwright + TypeScript suite.
 
 ## Install
 
+### Any agent (npx skills)
+
+[`npx skills`](https://github.com/vercel-labs/skills) detects this repo's
+`SKILL.md` layout automatically and installs it for whichever supported
+agents (Claude Code, Cursor, Codex, OpenCode, and ~75 others) it finds on
+your machine:
+
+```bash
+npx skills add pahans/playwright-page-object-model-skill
+```
+
+Add `-g` to install globally instead of per-project, or
+`--agent claude-code cursor` to target specific agents. Use `--list` to
+preview what would be installed without writing any files.
+
 ### Claude Code
 
 **As a plugin (recommended):**
