@@ -1,0 +1,15 @@
+{
+  "name": "pahans-plugins",
+  "description": "Pahan Sarathchandra's Claude Code plugin marketplace.",
+  "owner": {
+    "name": "Pahan Sarathchandra"
+  },
+  "plugins": [
+    {
+      "name": "playwright-page-object-model",
+      "source": "./",
+      "description": "Skill for writing and reviewing Playwright TypeScript E2E tests with the Page Object Model pattern.",
+      "version": "1.0.0"
+    }
+  ]
+}
