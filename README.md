@@ -1,24 +1,26 @@
 # playwright-page-object-model-skill
 
-A Claude Code [Agent Skill](https://docs.claude.com/en/docs/claude-code) for
-writing and reviewing Playwright TypeScript E2E tests with the Page Object
-Model pattern: page classes, semantic locators, and custom fixtures.
+An Agent Skill for writing and reviewing Playwright TypeScript E2E tests
+with the Page Object Model pattern: page classes, semantic locators, and
+custom fixtures. Works with [Claude Code](https://docs.claude.com/en/docs/claude-code),
+[OpenAI Codex CLI](https://developers.openai.com/codex/concepts/customization),
+and [Cursor](https://cursor.com/docs).
 
 Derived from a real Playwright + TypeScript suite.
 
 ## Install
 
-### As a plugin (recommended)
+### Claude Code
+
+**As a plugin (recommended):**
 
 ```bash
 /plugin marketplace add pahans/playwright-page-object-model-skill
 /plugin install playwright-page-object-model@pahans-plugins
 ```
 
-### Manually
-
-Clone the repo, then symlink (or copy) the nested skill directory into your
-personal skills directory:
+**Manually:** clone the repo, then symlink (or copy) the nested skill
+directory into your personal skills directory:
 
 ```bash
 git clone https://github.com/pahans/playwright-page-object-model-skill.git
@@ -27,6 +29,33 @@ ln -s "$(pwd)/playwright-page-object-model-skill/skills/playwright-page-object-m
 ```
 
 Claude Code will pick it up automatically on the next session.
+
+### Codex CLI
+
+Codex reads the same `SKILL.md` format. Clone the repo, then symlink the
+skill into your personal skills directory (`~/.agents/skills/`) or a
+project's `.agents/skills/` — this repo already ships that symlink at
+[.agents/skills/playwright-page-object-model](.agents/skills/playwright-page-object-model):
+
+```bash
+git clone https://github.com/pahans/playwright-page-object-model-skill.git
+ln -s "$(pwd)/playwright-page-object-model-skill/skills/playwright-page-object-model" \
+  ~/.agents/skills/playwright-page-object-model
+```
+
+### Cursor
+
+Copy (or symlink) the rule file into your project's `.cursor/rules/`:
+
+```bash
+git clone https://github.com/pahans/playwright-page-object-model-skill.git
+cp playwright-page-object-model-skill/.cursor/rules/playwright-page-object-model.mdc \
+  <your-project>/.cursor/rules/
+```
+
+It auto-attaches on `*.spec.ts`, `pages/**/*.ts`, and `fixtures.ts` files
+(see the `globs` in its frontmatter) — adjust those globs to match your
+project's layout.
 
 ## Contents
 
